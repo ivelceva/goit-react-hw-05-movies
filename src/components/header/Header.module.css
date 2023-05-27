@@ -1,4 +1,4 @@
-nav {
+.header {
         display: flex;
         justify-content: right;
         align-items: center;
@@ -8,6 +8,11 @@ nav {
         
     }
 
+.container {
+    background-color: red;
+}
+
+/* 
 .link {
     text-decoration: none;
     display: inline-block;
@@ -24,4 +29,4 @@ nav {
 .link.active {
     background-color: #fff;
     color: #0d253f;
-}
+} */
