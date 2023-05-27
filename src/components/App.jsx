@@ -14,13 +14,14 @@ const MovieDetails = lazy(() => import('../pages/movieDetails/MovieDetails'));
 const Cast = lazy(() => import('../pages/cast/Cast'));
 const Reviews = lazy(() => import('../pages/reviews/Reviews'));
 const NotFound = lazy(() => import('../pages/notFound/NotFound'));
-
+// const Header = lazy(() => import('../components/header/Header'));
 
 function App() {
   return (
     <div>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
+          {/* <Route path="/" element={<Header />}></Route> */}
           <Route path="/" element={<Home />} />
           <Route path="/movies" element={<Movies />} />
           <Route path="/movies/:movieId" element={<MovieDetails />} />
