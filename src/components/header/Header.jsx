@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import css from './Header.module.css';
 
 export default function Header() {
@@ -8,7 +8,7 @@ export default function Header() {
         <Link to="/">Home</Link>
         <Link to="/movies">Movies</Link>
       </nav>
+      <Outlet />
     </div>
   );
 }
-
