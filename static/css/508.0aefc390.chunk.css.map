@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/508.0aefc390.chunk.css","mappings":"AAAA,uBAEI,aAAc,CADd,iBAEJ","sources":["pages/home/Home.module.css"],"sourcesContent":[".homeTitle {\n    text-align: center;\n    color: #321414;\n}"],"names":[],"sourceRoot":""}
