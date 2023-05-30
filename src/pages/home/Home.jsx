@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div>
       <h1 className={css.homeTitle}>Tranding today</h1>
-      <ul>
+      <ul className={css.homeList}>
         {movies &&
           movies.map(({ id, title, poster_path }) => (
             <li className={css.link} key={id} id={id}>
