@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/136.51315320.chunk.css","mappings":"AAAA,uBAEI,aAAc,CACd,cAAe,CAFf,iBAGJ","sources":["pages/home/Home.module.css"],"sourcesContent":[".homeTitle {\n    text-align: center;\n    color: #321414;\n    font-size: 35px;\n}"],"names":[],"sourceRoot":""}
