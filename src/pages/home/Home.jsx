@@ -46,7 +46,6 @@ export default function Home() {
                   width=""
                   height=""
                 />
-                <p>{title}</p>
               </Link>
             </li>
           ))}
