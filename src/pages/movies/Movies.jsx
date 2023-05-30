@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { searchMovies } from '../../Fetch.jsx';
+import noImg from '..//..//images/No_image.jpg';
 import css from './Movies.module.css';
 
 export default function Movies() {
@@ -65,7 +66,7 @@ return (
         </button>
       </form>
     </header>
-    <ul className={css.list}>
+    <ul className={css.moviesList}>
       {movies.length > 0 &&
         movies.map(({ id, title, poster_path }) => (
           <li className={css.link} key={id} id={id}>
@@ -79,8 +80,8 @@ return (
                 },
               }}
             >
-              {/* <img className={css.img} src={poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : noImg} alt="poster" width="" height=""/> */}
-              <p className={css.filmName}>{title}</p>
+              <img className={css.img} src={poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` 
+              : noImg} alt="poster" width="" height=""/>
             </Link>
           </li>
         ))}

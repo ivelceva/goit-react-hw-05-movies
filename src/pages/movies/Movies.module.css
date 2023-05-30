@@ -35,3 +35,39 @@
 .searchButton:hover {
     background-color: #f0ffff;
 }
+
+.moviesList {
+    list-style: none;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    
+}
+
+.link {
+    border: 1px solid #808080;
+    border-radius: 10px;
+    box-shadow: 0 0 40px 0 rgba(0,0,0,.45);
+    width: 100%;
+    max-width: 240px;
+    margin: 0.5em;
+   
+}
+
+.img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /* filter: blur(4px); */
+}  
+
+.img:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+ box-shadow: 0 60px 80px #f1c40f, 0 45px 26px #f1c40f;
+}
