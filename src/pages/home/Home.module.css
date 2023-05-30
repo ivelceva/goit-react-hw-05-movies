@@ -1,5 +1,4 @@
-.title {}
-
-.list {}
-
-.link {}
+.homeTitle {
+    text-align: center;
+    color: #321414;
+}

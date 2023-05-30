@@ -18,7 +18,7 @@ export default function Home() {
   }, []);
   return (
     <div>
-      <h1>Tranding today</h1>
+      <h1 className={css.homeTitle}>Tranding today</h1>
       <ul>
         {movies &&
           movies.map(({ id, title, poster_path }) => (

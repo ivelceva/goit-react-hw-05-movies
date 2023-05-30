@@ -6,12 +6,8 @@ export default function Header() {
     <>
       <div className={css.container}>
         <nav className={css.header}>
-          <Link className={css.navBtn} to="/">
-            Home
-          </Link>
-          <Link className={css.navBtn} to="/movies">
-            Movies
-          </Link>
+          <Link className={css.navBtn} to="/">Home</Link>
+          <Link className={css.navBtn} to="/movies">Movies</Link>
         </nav>
       </div>
       <Outlet />
