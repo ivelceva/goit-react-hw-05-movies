@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getTrendingMovies } from '../../Fetch.jsx';
 import { Link, useLocation } from 'react-router-dom';
+import noImg from "..//..//images/No_image.jpg";
 import css from './Home.module.css';
 
 export default function Home() {
@@ -34,7 +35,7 @@ export default function Home() {
                   },
                 }}
               >
-                {/* <img
+                <img
                   className={css.img}
                   src={
                     poster_path
@@ -44,7 +45,7 @@ export default function Home() {
                   alt="poster"
                   width=""
                   height=""
-                /> */}
+                />
                 <p>{title}</p>
               </Link>
             </li>
