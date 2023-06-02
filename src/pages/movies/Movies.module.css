@@ -65,9 +65,3 @@
     /* filter: blur(4px); */
 }  
 
-.img:hover {
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(1.5); 
- box-shadow: 0 60px 80px #f1c40f, 0 45px 26px #f1c40f;
-}

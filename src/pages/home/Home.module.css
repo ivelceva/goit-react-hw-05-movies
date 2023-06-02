@@ -5,6 +5,7 @@
 }
 
 .homeList {
+    /* position: relative; */
     list-style: none;
     align-items: center;
     display: flex;
@@ -13,11 +14,15 @@
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
+   
     
 }
 
+/* .homeList:hover {
+     backdrop-filter: blur(5px);
+} */
+
 .link {
-    border: 1px solid #808080;
     border-radius: 10px;
     box-shadow: 0 0 40px 0 rgba(0,0,0,.45);
     width: 100%;
@@ -30,12 +35,15 @@
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    transition: box-shadow 0.2s ease 0s;
     /* filter: blur(4px); */
 }  
 
 .img:hover {
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(1.5); 
- box-shadow: 0 60px 80px #f1c40f, 0 45px 26px #f1c40f;
+  /* -ms-transform: scale(1.2);  */
+  /* -webkit-transform: scale(1.2);  */
+  /* transform: scale(1.2);  */
+  /* box-shadow: #f1c40f 0 60px 80px ; */
+  box-shadow: 0 60px 80px #9efd38, 0 45px 26px #9efd38;
+  border-radius: 10px;
 }
