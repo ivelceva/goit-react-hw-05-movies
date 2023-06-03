@@ -55,8 +55,8 @@
 .list {
     border-radius: 10px;
     box-shadow: 0 0 40px 0 rgba(0,0,0,.45);
-    flex-basis: calc((100% - 150px) / 4);
-    margin: 0.5em;
+    flex-basis: calc((100% - 90px) / 4);
+    margin: 20px;
     max-width: 240px;
 }
 
