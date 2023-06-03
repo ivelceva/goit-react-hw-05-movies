@@ -46,7 +46,7 @@ export default function MovieDetails() {
 
   return (
     <div className={css.container}>
-      <button className={css.button} onClick={goBack}>
+      <button className={css.returnBtn} onClick={goBack}>
         Go back
       </button>
       {loading && <Loader />}
@@ -69,18 +69,22 @@ export default function MovieDetails() {
           <div className={css.boxInfo}>
             <h2 className={css.movieTitle}>{movie.title}</h2>
             <p className={css.rating}>
-              Rating: <span className={css.voteRating}>{`${(movie.vote_average * 10).toFixed(1)}`}%</span>
+              Rating:{' '}
+              <span className={css.voteRating}>
+                {`${(movie.vote_average * 10).toFixed(1)}`}%
+              </span>
             </p>
             <div className={css.genreContainer}>
               <h3 className={css.genreTag}>Genres:</h3>
-              <p className={css.genreName}>{`${movie.genres.map(genre => genre.name).join(' / ')}`}</p>
+              <p className={css.genreName}>{`${movie.genres
+                .map(genre => genre.name)
+                .join(' / ')}`}</p>
             </div>
 
             <h3 className={css.overviewTag}>Overview</h3>
             <p className={css.movieOverview}>{`${movie.overview}`}</p>
 
             <div className={css.boxAddInfo}>
-              <h2 className={css.addInfoTitle}>Additional information</h2>
               <Link
                 className={css.castLink}
                 state={{ from }}

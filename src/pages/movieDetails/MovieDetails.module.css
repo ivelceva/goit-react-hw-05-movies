@@ -74,3 +74,74 @@ img {
 .addInfoTitle {
     margin: 0;
 }
+
+.returnBtn {
+    width: 130px;
+    height: 40px;
+    color: #4c516d;
+    background-color: #eae0c8;
+    text-decoration: none;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    border-radius: 6px; 
+    margin-top: 7px;
+    box-shadow: inset 2px 2px 10px rgba(255,255,255,.1), inset -5px -8px 8px rgba(0,0,0,.2);
+    cursor: pointer;
+    margin-left: 20px;
+    border: none;
+}
+
+.returnBtn:hover {
+    background-color: #ff8c00;
+    color: white;
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out; 
+}
+
+.boxAddInfo {
+    display: flex;
+}
+
+.castLink {
+    text-decoration: none;
+    display: block;
+    width: 130px;
+    height: 20px;
+    color: #4c516d;
+    background-color: #eae0c8;
+    text-decoration: none;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 6px; 
+    margin-top: 7px;
+    box-shadow: inset 2px 2px 10px rgba(255,255,255,.1), inset -5px -8px 8px rgba(0,0,0,.2);
+    cursor: pointer;
+    margin-left: 20px;
+    border: none;
+    
+}
+.reviewLink {
+    text-decoration: none;
+    display: block;
+    width: 130px;
+    height: 20px;
+    color: #4c516d;
+    background-color: #eae0c8;
+    text-decoration: none;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 6px; 
+    margin-top: 7px;
+    box-shadow: inset 2px 2px 10px rgba(255,255,255,.1), inset -5px -8px 8px rgba(0,0,0,.2);
+    cursor: pointer;
+    margin-left: 20px;
+    border: none;
+}
