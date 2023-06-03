@@ -23,8 +23,8 @@ export default function Home() {
       <ul className={css.homeList}>
         {movies &&
           movies.map(({ id, title, poster_path }) => (
-            <li className={css.link} key={id} id={id}>
-              <Link
+            <li className={css.list} key={id} id={id}>
+              <Link className={css.link}
                 to={{
                   pathname: `/movies/${`${id}`}`,
                   state: {
@@ -46,6 +46,7 @@ export default function Home() {
                   width=""
                   height=""
                 />
+                <p className={css.movieName}>{title}</p>
               </Link>
             </li>
           ))}

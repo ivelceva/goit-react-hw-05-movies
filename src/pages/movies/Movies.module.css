@@ -9,7 +9,7 @@
     -webkit-box-align: center;
     justify-content: center;
     gap: 10px;
-    margin-top: 40px;
+    margin-top: 140px;
 }
 
 .searchInput {
@@ -36,6 +36,10 @@
     background-color: #f0ffff;
 }
 
+.link {
+    text-decoration: none;
+}
+
 .moviesList {
     list-style: none;
     align-items: center;
@@ -45,23 +49,33 @@
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
-    
+    padding: 40px 80px; 
 }
 
-.link {
-    border: 1px solid #808080;
+.list {
     border-radius: 10px;
     box-shadow: 0 0 40px 0 rgba(0,0,0,.45);
-    width: 100%;
-    max-width: 240px;
+    flex-basis: calc((100% - 150px) / 4);
     margin: 0.5em;
-   
+    max-width: 240px;
+}
+
+.list:hover {
+    box-shadow: #9efd38 0px 0px 8px 6px, 0 60px 80px #9efd38;
+    border-radius: 10px;
 }
 
 .img {
-    width: 100%;
+    max-width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    /* filter: blur(4px); */
 }  
+
+.movieName {
+    font-size: 13px;
+    padding: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #665d1e;
+}
 
