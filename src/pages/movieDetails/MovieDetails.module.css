@@ -1,19 +1,21 @@
 .container {
     padding-top: 115px;
+    
 }
 
 .movieDetails {
     display: flex;
     width: 768px;
     margin: 0 auto;
-    gap: 30px;
+    gap: 20px;
     padding: 15px;
     background-color: #a0785a;
     color: #fff;
     box-shadow: rgb(238, 173, 113) 0px 0px 0px 0px,
                 rgb(20, 20, 20) 0px 10px 27px -8px inset,
                 rgb(238, 173, 113) 0px -10px 27px -8px inset,
-                rgba(181, 181, 181, 0) 5px 5px 15px 5px;
+                rgba(181, 181, 181, 0) 5px 5px 15px 5px,
+                0 60px 80px rgba(0,0,0,0.60), 0 45px 26px rgba(0,0,0,0.14);
     border-radius: 10px;
 }
 
@@ -22,4 +24,12 @@ img {
     max-width: 340px;
     height: 510px;
     border-radius: 5px;
+}
+
+.boxInfo {
+    padding: 10px;
+}
+
+.movieOverview {
+    text-align: justify;
 }
