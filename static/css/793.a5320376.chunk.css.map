@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/793.a5320376.chunk.css","mappings":"AAAA,kCAGI,aAAc,CAFd,cAAe,CACf,iBAEJ","sources":["pages/movieDetails/MovieDetails.module.css"],"sourcesContent":[".detailsTitle {\n    font-size: 35px;\n    text-align: center;\n    color: #321414;;\n}\n\n"],"names":[],"sourceRoot":""}
