@@ -126,6 +126,16 @@ img {
     border: none;
     
 }
+
+.castLink:hover {
+    background-color: #ff8c00;
+    color: white;
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out; 
+}
+
 .reviewLink {
     text-decoration: none;
     display: block;
@@ -144,4 +154,13 @@ img {
     cursor: pointer;
     margin-left: 20px;
     border: none;
+}
+
+.reviewLink:hover {
+    background-color: #ff8c00;
+    color: white;
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out; 
 }
