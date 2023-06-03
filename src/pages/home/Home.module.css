@@ -35,15 +35,10 @@
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    transition: box-shadow 0.2s ease 0s;
-    /* filter: blur(4px); */
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }  
 
 .img:hover {
-  /* -ms-transform: scale(1.2);  */
-  /* -webkit-transform: scale(1.2);  */
-  /* transform: scale(1.2);  */
-  /* box-shadow: #f1c40f 0 60px 80px ; */
-  box-shadow: 0 60px 80px #9efd38, 0 45px 26px #9efd38;
+  box-shadow: #9efd38 0px 0px 8px 6px, 0 60px 80px #9efd38;
   border-radius: 10px;
 }
