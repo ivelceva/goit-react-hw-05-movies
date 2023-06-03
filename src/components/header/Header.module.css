@@ -16,14 +16,32 @@
 
 .header {
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     align-items: center;
     list-style: none;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
+.btnWrap {
+    display: flex;
+    
+}
+
+.title {
+    padding: 12px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    color: rgb(238, 173, 113);
+    font-family: inherit;
+    font-size: 38px;
+    font-weight: 700;
+    margin: 0;
+}
+
 .navBtn {
+    display: block;
     width: 130px;
     height: 40px;
     color: #4c516d;
