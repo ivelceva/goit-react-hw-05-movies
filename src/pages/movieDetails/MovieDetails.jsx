@@ -67,16 +67,20 @@ export default function MovieDetails() {
             />
           </div>
           <div className={css.boxInfo}>
-            <h2>{movie.title}</h2>
-            <p>User Score: {`${(movie.vote_average * 10).toFixed(1)}`}%</p>
+            <h2 className={css.movieTitle}>{movie.title}</h2>
+            <p className={css.rating}>
+              Rating: <span className={css.voteRating}>{`${(movie.vote_average * 10).toFixed(1)}`}%</span>
+            </p>
+            <div className={css.genreContainer}>
+              <h3 className={css.genreTag}>Genres:</h3>
+              <p className={css.genreName}>{`${movie.genres.map(genre => genre.name).join(' / ')}`}</p>
+            </div>
 
-            <h3>Genres</h3>
-            <p>{`${movie.genres.map(genre => genre.name).join(' / ')}`}</p>
-            <h3>Overview</h3>
+            <h3 className={css.overviewTag}>Overview</h3>
             <p className={css.movieOverview}>{`${movie.overview}`}</p>
-           
-           <div className={css.boxAddInfo}>
-              <h2>Additional information</h2>
+
+            <div className={css.boxAddInfo}>
+              <h2 className={css.addInfoTitle}>Additional information</h2>
               <Link
                 className={css.castLink}
                 state={{ from }}
@@ -93,7 +97,7 @@ export default function MovieDetails() {
               >
                 Reviews
               </Link>
-            </div> 
+            </div>
           </div>
         </div>
       )}

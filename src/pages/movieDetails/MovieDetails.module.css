@@ -30,6 +30,47 @@ img {
     padding: 10px;
 }
 
+.movieTitle {
+     margin: 0;
+     text-shadow: 0 0 3px #cc00ff;
+}
+
+.rating {
+    font-weight: 700;
+    color: #f2f3f4;
+}
+
+.voteRating {
+    font-weight: 400;
+    margin-left: 10px;
+    color: #dcdcdc;
+}
+
+.genreContainer {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 45px;
+}
+
+.genreTag {
+    margin: 0;
+    color: #f2f3f4;
+}
+.genreName {
+    margin: 0;
+    color: #dcdcdc;
+}
+
+.overviewTag {
+    color: #f2f3f4;
+}
+
 .movieOverview {
     text-align: justify;
+    color: #dcdcdc;
+}
+
+.addInfoTitle {
+    margin: 0;
 }
