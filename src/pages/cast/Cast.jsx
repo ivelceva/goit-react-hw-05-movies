@@ -47,9 +47,9 @@ export default function Cast() {
                   height=""
                 />
               </div>
-              <div>
-                <p className={css.castName}>{name}</p>
-                <p>Character: {character}</p>
+              <div className={css.castInfo}>
+                <p className={css.actorRealName}>{name}</p>
+                <p className={css.characterName}>{character}</p>
               </div>
             </li>
           ))}
