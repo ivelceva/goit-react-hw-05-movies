@@ -28,7 +28,7 @@
 
 .list:hover {
     box-shadow: #9efd38 0px 0px 8px 6px, 0 60px 80px #9efd38;
-  border-radius: 10px;
+    border-radius: 10px;
 }
 
 .img {

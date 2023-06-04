@@ -1,0 +1,16 @@
+.castList {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.castLink {
+    box-shadow: 0 0 40px 0 rgba(0,0,0,.45);
+    border-radius: 10px;
+}
+
+.castImg {
+    width: 100%;
+}
