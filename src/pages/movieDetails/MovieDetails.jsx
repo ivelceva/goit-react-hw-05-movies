@@ -5,7 +5,6 @@ import Loader from 'components/loader/Loader';
 import noImg from '..//..//images/No_image.jpg';
 import css from './MovieDetails.module.css';
 
-
 export default function MovieDetails() {
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -96,11 +95,29 @@ export default function MovieDetails() {
               <Link
                 className={css.reviewLink}
                 state={{ from }}
+                const
                 to={reviewLink}
                 replace
               >
                 Reviews
               </Link>
+
+              {/* <Link
+                className={css.castLink}
+                state={{ from }}
+                to="/cast"
+                replace
+              >
+                Cast
+              </Link>
+              <Link
+                className={css.reviewLink}
+                state={{ from }}
+                to="/reviews"
+                replace
+              >
+                Reviews
+              </Link> */}
             </div>
           </div>
         </div>
