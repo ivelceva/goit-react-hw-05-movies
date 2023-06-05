@@ -34,7 +34,7 @@ export default function MovieDetails() {
     movieDetails();
   }, [movieId]);
 
-  const goBack = () => navigate(-1);
+  const goBack = () => navigate(from || '/');
   const isCastDetails = location.pathname.includes('cast');
   const castLink = isCastDetails
     ? `/movies/${movieId}`

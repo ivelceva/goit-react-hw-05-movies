@@ -37,7 +37,7 @@ const Movies = () => {
       setSearchMovie('');
 
       if (results.length === 0) {
-        window.alert('We do not have such films');
+        window.alert('We do not have such movie');
       }
 
       history({
@@ -72,7 +72,9 @@ const Movies = () => {
               key={id}
               id={id}
               title={title}
-              posterPath={poster_path || noImg} // Use noImg as fallback if poster_path is not available
+              posterPath={poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : noImg}
+                                                       
+              // posterPath={poster_path || noImg} // Use noImg as fallback if poster_path is not available
               location={location}
             />
           ))}
