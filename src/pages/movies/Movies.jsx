@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import { searchMovies } from '../../Fetch.jsx';
-//import css from './Movies.module.css';
 import MovieList from 'components/movieList/MovieList.jsx';
 import SearchForm from 'components/searchForm/SearchForm.jsx';
 
@@ -9,12 +8,11 @@ export default function Movies() {
   const [searchMovie, setSearchMovie] = useState('');
   const [movies, setMovies] = useState([]);
 
-  const location = useLocation();
+  const [searchParams] = useSearchParams();
   const history = useNavigate();
 
   useEffect(() => {
-    const searchString = new URLSearchParams(location.search).get('query');
-
+    const searchString = searchParams.get('query');
     if (searchString) {
       const getMovies = async () => {
         const { results } = await searchMovies(searchString);
@@ -25,7 +23,7 @@ export default function Movies() {
 
       getMovies();
     }
-  }, [location.search]);
+  }, [searchParams]);
 
   const handleSubmit = async e => {
     e.preventDefault();
@@ -37,13 +35,10 @@ export default function Movies() {
       setSearchMovie('');
 
       if (results.length === 0) {
-        window.alert('We do not have such films');
+        window.alert('Sorry, we do not have such movie');
       }
 
-      history({
-        ...location,
-        search: `query=${searchMovie}`,
-      });
+      history({ search: `query=${searchMovie}` });
     }
   };
 
@@ -56,10 +51,72 @@ export default function Movies() {
           setSearchMovie={setSearchMovie}
         />
       </header>
-      <MovieList movies={movies} location={location} />
+      <MovieList movies={movies} />
     </>
   );
 }
+
+// import React, { useState, useEffect } from 'react';
+// import { useLocation, useNavigate } from 'react-router-dom';
+// import { searchMovies } from '../../Fetch.jsx';
+// import MovieList from 'components/movieList/MovieList.jsx';
+// import SearchForm from 'components/searchForm/SearchForm.jsx';
+
+// export default function Movies() {
+//   const [searchMovie, setSearchMovie] = useState('');
+//   const [movies, setMovies] = useState([]);
+
+//   const location = useLocation();
+//   const history = useNavigate();
+
+//   useEffect(() => {
+//     const searchString = new URLSearchParams(location.search).get('query');
+
+//     if (searchString) {
+//       const getMovies = async () => {
+//         const { results } = await searchMovies(searchString);
+
+//         setMovies(results);
+//         setSearchMovie(searchString);
+//       };
+
+//       getMovies();
+//     }
+//   }, [location.search]);
+
+//   const handleSubmit = async e => {
+//     e.preventDefault();
+
+//     if (searchMovie.trim()) {
+//       const { results } = await searchMovies(searchMovie);
+
+//       setMovies(results);
+//       setSearchMovie('');
+
+//       if (results.length === 0) {
+//         window.alert('We do not have such films');
+//       }
+
+//       history({
+//         ...location,
+//         search: `query=${searchMovie}`,
+//       });
+//     }
+//   };
+
+//   return (
+//     <>
+//       <header>
+//         <SearchForm
+//           handleSubmit={handleSubmit}
+//           searchMovie={searchMovie}
+//           setSearchMovie={setSearchMovie}
+//         />
+//       </header>
+//       <MovieList movies={movies} location={location} />
+//     </>
+//   );
+// }
 
 // import React, { useState, useEffect } from 'react';
 // import { useLocation, useNavigate } from 'react-router-dom';
@@ -132,104 +189,3 @@ export default function Movies() {
 //     </>
 //   );
 // }
-
-// import { useState, useEffect } from 'react';
-// import { Link, useLocation, useNavigate } from 'react-router-dom';
-// import { searchMovies } from '../../Fetch.jsx';
-// import noImg from '..//..//images/No_image.jpg';
-// import css from './Movies.module.css';
-
-// export default function Movies() {
-// const [searchMovie, setSearchMovie] = useState('');
-// const [movies, setMovies] = useState([]);
-
-// const location = useLocation();
-// const history = useNavigate();
-
-// useEffect(() => {
-//     const searchString = new URLSearchParams(location.search).get('query');
-
-//     if (searchString) {
-//         const getMovies = async () => {
-//             const { results } = await searchMovies(searchString);
-
-//             setMovies(results);
-//             setSearchMovie(searchString);
-
-//         };
-
-//         getMovies();
-//     }
-// }, [location.search]);
-
-// const handleSubmit = async e => {
-//     e.preventDefault();
-
-//     if (searchMovie.trim()) {
-//         const { results } = await searchMovies(searchMovie);
-
-//         setMovies(results);
-//         setSearchMovie('');
-
-//         if (results.length === 0) {
-//             window.alert ('We have not such films');
-//         }
-
-//         history({
-//             ...location,
-//             search: `query=${searchMovie}`,
-//         });
-//     }
-// };
-
-// return (
-//   <>
-//     <header>
-//       <form className={css.searchForm} onSubmit={handleSubmit}>
-//         <input
-//           onChange={e => setSearchMovie(e.target.value)}
-//           type="text"
-//           autoComplete="off"
-//           autoFocus
-//           placeholder="Search movie"
-//           value={searchMovie}
-//           className={css.searchInput}
-//         />
-//         <button className={css.searchButton} type="submit">
-//           &#128269;
-//         </button>
-//       </form>
-//     </header>
-//     <ul className={css.moviesList}>
-//       {movies.length > 0 &&
-//         movies.map(({ id, title, poster_path }) => (
-//           <li className={css.list} key={id} id={id}>
-//             <Link className={css.link}
-//               to={{
-//                 pathname: `/movies/${`${id}`}`,
-//                 state: {
-//                   from: {
-//                     location,
-//                   },
-//                 },
-//               }}
-//             >
-//               <img
-//                 className={css.img}
-//                 src={
-//                   poster_path
-//                     ? `https://image.tmdb.org/t/p/w500${poster_path}`
-//                     : noImg
-//                 }
-//                 alt="poster"
-//                 width=""
-//                 height=""
-//               />
-//               <p className={css.movieName}>{title}</p>
-//             </Link>
-//           </li>
-//         ))}
-//     </ul>
-//   </>
-// );
-// };
