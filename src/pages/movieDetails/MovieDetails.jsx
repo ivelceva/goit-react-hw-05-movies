@@ -34,14 +34,6 @@ export default function MovieDetails() {
   }, [movieId]);
 
   const goBack = () => navigate(from || '/');
-  // const isCastDetails = location.pathname.includes('cast');
-  // const castLink = isCastDetails
-  //   ? `/movies/${movieId}`
-  //   : `/movies/${movieId}/cast`;
-  // const isReviewDetails = location.pathname.includes('reviews');
-  // const reviewLink = isReviewDetails
-  //   ? `/movies/${movieId}`
-  //   : `/movies/${movieId}/reviews`;
 
   return (
     <div className={css.container}>
@@ -84,24 +76,6 @@ export default function MovieDetails() {
             <p className={css.movieOverview}>{`${movie.overview}`}</p>
 
             <div className={css.boxAddInfo}>
-              {/* <Link
-                className={css.castLink}
-                state={{ from }}
-                to={castLink}
-                replace
-              >
-                Cast
-              </Link>
-              <Link
-                className={css.reviewLink}
-                state={{ from }}
-                const
-                to={reviewLink}
-                replace
-              >
-                Reviews
-              </Link> */}
-
               <Link
                 className={css.castLink}
                 state={{ from }}
